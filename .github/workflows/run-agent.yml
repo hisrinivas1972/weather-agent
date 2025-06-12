@@ -22,7 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip              
+          pip install google-generativeai --upgrade              
+          pip install google-adk litellm --upgrade
+
+
           pip install -r requirements.txt
 
       - name: Run agent script
